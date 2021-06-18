@@ -1,0 +1,169 @@
+html{
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	}
+
+*{
+	margin: 0;
+	padding: 0;
+	border:0;
+	font-size: 100%;
+	}
+
+
+
+a{
+	text-decoration: none;
+	padding: 10px;
+	}
+
+
+a:hover{
+	color: rgba(70,70,70,0.5);
+	}
+
+a:visited{
+	color: black;
+}
+
+h3{
+	padding: 2%;
+	font-size: 30px;
+	padding-left: 100px;
+}
+
+
+
+/*  dispo générale du header */
+	header	{
+		display:flex;
+ 		padding: 1%;
+ 		margin-top: 1%;
+ 		font-size: 25px;
+		letter-spacing: 2px;
+		position: sticky; /*  coller la barre de nav en scrollant */
+		top: 0px;
+		background-color: rgba(255,255,255);
+		margin: 10px;
+		}
+
+	header a { /*  couleur des liens dans le menu */
+		color: black;
+		}
+
+
+/*  le menu */
+
+	.menu {
+		margin-top: 25px;
+		}
+
+	.menu li{
+		margin: 30px;
+		float: left;  /*mettre les élements en ligne*/
+		text-align: center;
+	}
+
+	.menu a:hover{  /*ligne noire en dessous des onglets du menu quand on passe dessus*/
+		border-bottom: 1px solid black;
+		}
+
+	.menu ul { /*suppression des puces automatique de la liste*/
+		list-style-type: none;  
+		}
+
+		header nav ul::after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+	/*sous menu*/
+		.sous{
+			display: none;  /*la on fait disparaitre les sous menus*/
+			position: absolute; /*on fixe les sous menus*/
+			width: 100%;
+			background-color: white;
+			}
+		
+		.menu ul li:hover .sous{  /*les sous menu apparaissent quand on passe la souris dessus*/
+			font-size: 15px;
+			display: block;
+			line-height: 8px;
+		}
+
+		.sous li{
+			float: none;
+			width: 100%;
+			text-align: left;
+
+			}
+
+	
+	/* les onglets réseaux */
+	#reseaux{
+		
+		padding-left: 5%;
+		margin-top: 50px;
+	}
+
+
+
+#bio{
+	display: flex;	
+}
+
+
+.equipe{
+	flex: 1; 
+	padding: 1em;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.equipe p {
+	text-align: justify;
+
+}
+
+
+footer{
+	text-align: center;
+	padding-bottom: 0%;
+	margin-top: 40px;
+	}
+
+/*responsivité*/
+	@media screen and (max-width: 414px)
+	{
+	#apropos{
+		flex-direction: column;
+		}
+	#services{
+		flex-direction: column;
+		}
+
+	nav a{
+		display: block;
+		padding: 10px;
+		}
+	header{
+		flex-direction: row;
+		}
+	}
+
+#up  {
+	padding-left: 85%;
+	padding-bottom: 1%;
+	}
+
+#progress{
+	background-color: black;
+	height: 4px;
+	width: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999; 
+}
+
